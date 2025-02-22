@@ -22,7 +22,7 @@ def main():
     baseurl = "https://www.po18m.com/sort/0/"  #要爬取的网页链接
     # 1.爬取网页
     datalist = getData(baseurl)
-    savepath = "po18.xls"    #当前目录新建XLS，存储进去
+    savepath = "xxxx.xls"    #当前目录新建XLS，存储进去
     # dbpath = "movie.db"              #当前目录新建数据库，存储进去
     # 3.保存数据
     saveData(datalist,savepath)      #2种存储方式可以只选择一种
