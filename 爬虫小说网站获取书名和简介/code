@@ -3,20 +3,9 @@ from bs4 import BeautifulSoup  # 网页解析，获取数据
 import re  # 正则表达式，进行文字匹配`
 import urllib.request, urllib.error  # 制定URL，获取网页数据
 import xlwt  # 进行excel操作
-#import sqlite3  # 进行SQLite数据库操作
 
-#findLink = re.compile(r'<a href="(.*?)">')  # 创建正则表达式对象，标售规则   影片详情链接的规则
-#findImgSrc = re.compile(r'<img.*src="(.*?)"', re.S) #电影图片链接
 find_book_name = re.compile(r'<h4 class="bookname"><a href="(.*)">(.*)</a></h4>',re.S) #书的链接 书的名字
 find_introduction=re.compile(r'<meta property="og:description" content="(.*?)" />',re.S) #书的简介
-
-
-#findRating = re.compile(r'<span class="rating_num" property="v:average">(.*)</span>') #评分
-#findJudge = re.compile(r'<span>(\d*)人评价</span>')
-#findInq = re.compile(r'<span class="inq">(.*)</span>')
-#findBd = re.compile(r'<p class="">(.*?)</p>', re.S)
-
-
 
 def main():
     baseurl = "https://www.po18m.com/sort/0/"  #要爬取的网页链接
@@ -27,7 +16,6 @@ def main():
     # 3.保存数据
     saveData(datalist,savepath)      #2种存储方式可以只选择一种
     # saveData2DB(datalist,dbpath)
-
 
 
 # 爬取网页
