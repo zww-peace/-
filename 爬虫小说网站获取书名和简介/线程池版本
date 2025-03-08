@@ -10,7 +10,7 @@ datalist=[]
 count=0
 headers={
     "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"}
-#创建第二个线程，用于每个页面中30条小说记录的并发访问
+#创建第二个线程池，用于每个页面中30条小说记录的并发访问
 threadPool = ThreadPoolExecutor(max_workers=50, thread_name_prefix="test_")
 def download_childpage(item): #访问页面中小说简介的子页面
     # 查找符合要求的字符串
