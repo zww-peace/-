@@ -1,3 +1,4 @@
+#线程池版本速度非常快，我都不敢用它全扒下来怕把人家服务器搞崩了
 import requests
 from concurrent.futures import ThreadPoolExecutor
 import re
